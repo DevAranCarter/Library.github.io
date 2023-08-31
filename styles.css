@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    height: 100vh;
+    width: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+#pop-up {
+    display: none;
+    
+
+
+}
+
+#pop-up-btn {
+    grid-column: 2/3;
+    width: 120px;
+    height: 70px;
+}
+
+form {
+    border: 2px black solid;
+}
+
