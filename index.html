@@ -9,24 +9,33 @@
 <body>
     <div class="container">
         <div id="pop-up">
+            <dialog open>
             <form class="form-container">
             <h1>Enter a book</h1>
 
             <label for="title"> <b>Title</b></label>
-            <input type="text" placeholder="enter a title" name="title" id="title" required>
+            <input type="text" placeholder="enter a title" name="title" id="title" required />
             
             <label for="author"><b>Author</b></label>
-            <input type="text" placeholder="Enter author" name="author" id="author" required>
+            <input type="text" placeholder="Enter author" name="author" id="author" required />
     
             <label for="yearPublished"><b>Year Published</b></label>
-            <input type="number" placeholder="Enter year published" name="yearPublished" id="yearPublished" required>
+            <input type="number" placeholder="Enter year published" name="yearPublished" id="yearPublished" required />
+            <div class="read">
+            <label for="read-check">Read?</label>
+            <input type="checkbox" id="read-check" value="false" name="read-check">
+            </div>
+
 
             <button type="submit" id="sbmt-btn">Submit</button>
             <button type="button" id="btn-close">Close</button>
         
         </form>
+        </dialog>
         </div>
     <button id="pop-up-btn">Enter a Book here</button>
+
+    <div id="book-cards"></div>
 
 </div>
     

@@ -13,18 +13,47 @@ body {
 
 #pop-up {
     display: none;
+    grid-column: 2/3;
+    grid-row: 2/3;
     
 
 
 }
 
+.form-container {
+    display: flex;
+    flex-direction: column;
+    border: none;
+}
+
 #pop-up-btn {
-    grid-column: 2/3;
+    grid-column: 2/3; 
     width: 120px;
     height: 70px;
+    justify-self: center;
+    align-self: center;
 }
 
 form {
     border: 2px black solid;
 }
 
+#book-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-column: 1/5;
+    grid-row: 2/5;
+    align-items: center;
+    justify-items: center; 
+}
+
+#read-check {
+    color: whitesmoke;
+    border: none;
+    border-radius: 20px;
+}
+
+.read {
+    display: flex;
+}
