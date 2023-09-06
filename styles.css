@@ -9,6 +9,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
+    background-color: antiquewhite;
 }
 
 #pop-up {
@@ -19,6 +20,7 @@ body {
 
 
 }
+
 
 .form-container {
     display: flex;
@@ -32,6 +34,7 @@ body {
     height: 70px;
     justify-self: center;
     align-self: center;
+    border-radius: 20px;
 }
 
 form {
@@ -57,3 +60,4 @@ form {
 .read {
     display: flex;
 }
+

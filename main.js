@@ -33,6 +33,19 @@ function addBook(title, author, yearPublished, read){
 
 }
 
+function removeElement() {
+
+}
+
+function changeRead() {
+    if (read.checked == true) {
+        read.checked = false;
+    }
+    else {
+        read.checked = true;
+    }
+}
+
 function bookDetails(array) {
     for (let i = bookCounter; i < array.length; i++) {
         let newcard = document.createElement('div');
@@ -48,22 +61,39 @@ function bookDetails(array) {
         let yearPublished = document.createElement('h2');
         yearPublished.innerText = array[i].yearPublished;
         newcard.appendChild(yearPublished);
+        let buttondiv = document.createElement('div');
+        buttondiv.style.display = 'flex';
+        buttondiv.style.flexDirection = 'column';
+        buttondiv.style.justifyContent = 'center';
+        buttondiv.style.alignItems = 'center';
+        buttondiv.style.gap = '10px';
+        newcard.appendChild(buttondiv);
         let hasread = document.createElement('button');
         if (read.checked == false) {
             hasread.style.backgroundColor = 'red';
             hasread.textContent = 'Not read';
             hasread.style.color = 'white';
-            hasread.style.borderRadius = '20px';
+            hasread.style.borderRadius = '6px';
+
         } 
         else if (read.checked == true) {
             hasread.style.backgroundColor = 'green';
             hasread.textContent = 'Read';
             hasread.style.color = 'white';
-            hasread.style.borderRadius = '20px';
+            hasread.style.borderRadius = '6px';
             hasread.style.border = 'none';
         }
-        newcard.appendChild(hasread);
-        newcard.style.width = 'auto';
+        let removeElement = document.createElement('button');
+        buttondiv.appendChild(hasread);
+        buttondiv.appendChild(removeElement);
+        hasread.style.gap = '10px';
+        removeElement.style.gap= '10px';
+        removeElement.style.borderRadius = '6px';
+        removeElement.style.backgroundColor = 'white';
+        hasread.style.width = '80px';
+        removeElement.style.width = '80px';
+        removeElement.textContent = 'Remove';
+        newcard.style.minWidth = '160px';
         newcard.style.borderRadius = '12px';
         newcard.style.textAlign = 'center';
         newcard.style.padding = '20px';
@@ -71,6 +101,10 @@ function bookDetails(array) {
         hasread.style.border = 'none';
 
         bookCounter += 1;
+
+        removeElement.addEventListener('click', () => {
+            newcard.remove();
+        })
 
     }
 }
